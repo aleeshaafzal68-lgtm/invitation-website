@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    overflow: hidden;
+}
+
+
+/* BACKGROUND */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+/* OPENING SCREEN */
+
+.opening {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    transition: opacity 1s ease;
+}
+
+
+.terminal {
+    width: min(90%, 650px);
+    padding: 35px;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    border: 1px solid #777;
+
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.12);
+
+    font-family: "Courier New", monospace;
+}
+
+
+.terminal p {
+    color: #ddd;
+    font-size: 15px;
+    line-height: 2;
+}
+
+
+.cursor {
+    animation: blink 0.8s infinite;
+}
+
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* OPEN BUTTON */
+
+.open-btn {
+    display: block;
+
+    margin: 30px auto 0;
+
+    padding: 14px 28px;
+
+    background: transparent;
+    color: white;
+
+    border: 1px solid white;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.open-btn:hover {
+    background: white;
+    color: black;
+}
+
+
+/* INVITATION OVERLAY */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 20;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.78);
+}
+
+
+/* INVITATION BOX */
+
+.invitation {
+    position: relative;
+
+    width: min(90%, 650px);
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 45px 40px;
+
+    background: #111;
+
+    border: 1px solid #666;
+
+    text-align: center;
+
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+
+    animation: popup 0.5s ease;
+}
+
+
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* CLOSE */
+
+.close {
+    position: absolute;
+
+    top: 10px;
+    right: 18px;
+
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+
+    color: #fff;
+
+    cursor: pointer;
+}
+
+
+/* INVITATION TEXT */
+
+.invitation h2 {
+    font-size: 14px;
+
+    color: #aaa;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.invitation h1 {
+    font-size: clamp(35px, 6vw, 55px);
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.line {
+    width: 80px;
+    height: 1px;
+
+    background: #aaa;
+
+    margin: 0 auto 25px;
+}
+
+
+.invitation p {
+    font-family: Arial, sans-serif;
+
+    color: #ddd;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin: 12px 0;
+}
+
+
+.event-date {
+    margin: 25px 0;
+
+    padding: 12px;
+
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+/* ACCEPT BUTTON */
+
+.accept-btn {
+    margin-top: 15px;
+
+    padding: 14px 28px;
+
+    background: white;
+
+    color: black;
+
+    border: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.accept-btn:hover {
+    background: #ccc;
+}
+
+
+/* FOOTER */
+
+.footer {
+    margin-top: 25px;
+
+    color: #777;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 12px;
+}
+
+
+/* VIDEO OVERLAY */
+
+.video-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 30;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.82);
+}
+
+
+/* VIDEO BOX */
+
+.video-popup {
+    position: relative;
+
+    width: min(90%, 750px);
+
+    padding: 35px;
+
+    background: #111;
+
+    border: 1px solid #666;
+
+    text-align: center;
+
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+
+    animation: popup 0.5s ease;
+}
+
+
+.video-popup h2 {
+    font-size: 16px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+
+.video-close {
+    position: absolute;
+
+    top: 10px;
+    right: 18px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+.video-box {
+    width: 100%;
+    height: 65vh;
+
+    background: #000;
+
+    border: 1px solid #555;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.video-box video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    background: #000;
+}
+
+
+/* CONTINUE */
+
+.continue-btn {
+    margin-top: 25px;
+
+    padding: 13px 28px;
+
+    background: white;
+
+    color: black;
+
+    border: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+
+.continue-btn:hover {
+    background: #ccc;
+}
+
+
+/* THANK YOU */
+
+.thank-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 40;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.82);
+}
+
+
+.thank-popup {
+    width: min(90%, 600px);
+
+    padding: 45px 35px;
+
+    background: #111;
+
+    border: 1px solid #666;
+
+    text-align: center;
+
+    color: white;
+
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+
+    animation: popup 0.5s ease;
+}
+
+
+.thank-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    border: 2px solid white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 30px;
+}
+
+
+.thank-popup h2 {
+    font-size: 14px;
+
+    color: #aaa;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.thank-popup h1 {
+    font-size: clamp(35px, 6vw, 55px);
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.thank-popup p {
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #ddd;
+
+    margin: 10px 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .terminal {
+        padding: 25px;
+    }
+
+    .terminal p {
+        font-size: 12px;
+    }
+
+    .invitation {
+        padding: 40px 22px;
+    }
+
+    .video-popup {
+        padding: 30px 15px;
+    }
+
+    .video-box video {
+        max-height: 280px;
+    }
+
+    .thank-popup {
+        padding: 35px 20px;
+    }
+}

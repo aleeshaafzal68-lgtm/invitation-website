@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmers' Day 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="background">
+        <img src="campus.jpeg" alt="College Building">
+    </div>
+
+
+    <!-- OPENING SCREEN -->
+    <div class="opening" id="opening">
+
+        <div class="terminal">
+
+            <p>> Initializing invitation...</p>
+            <p>> Loading Programmer's Day...</p>
+            <p>> Date detected: 15 September 2026</p>
+
+            <p>
+                > Preparing invitation
+                <span class="cursor">_</span>
+            </p>
+
+            <button class="open-btn" onclick="openInvitation()">
+                OPEN INVITATION
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- INVITATION -->
+    <div class="overlay" id="overlay">
+
+        <div class="invitation">
+
+            
+
+            <h2>YOU ARE CORDIALLY INVITED</h2>
+
+            <h1> WORLD 
+                PROGRAMMER'S</S>
+                DAY</h1>
+
+            <div class="line"></div>
+
+            <p>Dear Respected Teachers,</p>
+
+            <p>
+                Join us to celebrating <b> world Programmers' Day</b>.
+                Your presence will make this celebration
+                more meaningful.
+            </p>
+
+            <div class="event-date">
+                15 SEPTEMBER 2026
+            </div>
+
+            <p>
+                We look forward to celebrate this
+                special day with you.
+            </p>
+
+            <button class="accept-btn" onclick="acceptInvitation()">
+                ACCEPT INVITATION
+            </button>
+
+            <div class="footer">
+                &lt; Code • Create • Celebrate /&gt;
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO -->
+    <div class="video-overlay" id="videoOverlay">
+
+        <div class="video-popup">
+
+            
+
+            <h2>PROGRAMMERS' DAY</h2>
+
+            <div class="video-box">
+
+                <video id="programmerVideo" controls playsinline>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+            <button class="continue-btn" onclick="showThankYou()">
+                CONTINUE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- THANK YOU -->
+    <div class="thank-overlay" id="thankOverlay">
+
+        <div class="thank-popup">
+
+            <div class="thank-icon">✓</div>
+
+            <h2>INVITATION ACCEPTED</h2>
+
+            <h1>THANK YOU!</h1>
+
+            <div class="line"></div>
+
+            <p>
+                Thank you for accepting our invitation.
+            </p>
+
+            <p>
+                We look forward to celebrating
+                <b>Programmers' Day</b> with you.
+            </p>
+
+            <div class="event-date">
+                15 SEPTEMBER 2026
+            </div>
+
+            <div class="footer">
+                &lt; Code • Create • Celebrate /&gt;
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
